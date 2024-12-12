@@ -1,32 +1,38 @@
 //header click
 const navLinks = document.querySelectorAll('header nav ul li .nav-item');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        // Loại bỏ màu đỏ và đặt trắng cho tất cả các mục
-        navLinks.forEach(otherLink => {
-            otherLink.classList.remove('text-my-red');
-            otherLink.classList.add('text-white');
-        });
-
-        // Thêm màu đỏ cho mục được nhấn
-        event.currentTarget.classList.add('text-my-red');
-        event.currentTarget.classList.remove('text-white');
-    });
-});
 const subNavLinks = document.querySelectorAll('#dropdownNavbar ul li a');
-subNavLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        // Loại bỏ màu đỏ và đặt trắng cho tất cả các mục
-        subNavLinks.forEach(otherLink => {
-            otherLink.classList.remove('text-my-red');
-            otherLink.classList.add('text-white');
-        });
-
-        // Thêm màu đỏ cho mục được nhấn
-        event.currentTarget.classList.add('text-my-red');
-        event.currentTarget.classList.remove('text-white');
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    // Loại bỏ màu đỏ và đặt trắng cho tất cả các mục
+    navLinks.forEach(otherLink => {
+      otherLink.classList.remove('text-my-red');
+      otherLink.classList.add('text-white');
     });
+
+    // Thêm màu đỏ cho mục được nhấn
+    event.currentTarget.classList.add('text-my-red');
+    event.currentTarget.classList.remove('text-white');
+    subNavLinks.forEach(otherLink => {
+      otherLink.classList.remove('text-my-red');
+      otherLink.classList.add('text-white');
+    });
+    subNavLinks[0].classList.add('text-my-red')
+    subNavLinks[0].classList.remove('text-white')
+  });
+});
+
+subNavLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    // Loại bỏ màu đỏ và đặt trắng cho tất cả các mục
+    subNavLinks.forEach(otherLink => {
+      otherLink.classList.remove('text-my-red');
+      otherLink.classList.add('text-white');
+    });
+
+    // Thêm màu đỏ cho mục được nhấn
+    event.currentTarget.classList.add('text-my-red');
+    event.currentTarget.classList.remove('text-white');
+  });
 });
 // How long you want the animation to take, in ms
 const animationDuration = 2000;
@@ -43,7 +49,7 @@ const animateCountUp = el => {
   const countTo = parseInt(el.getAttribute('data-count'), 10);
   // Reset the element to 0 for a fresh start
   el.innerHTML = '0';
-  
+
   // Start the animation running 60 times per second
   const counter = setInterval(() => {
     frame++;
@@ -100,11 +106,11 @@ const config = {
 };
 
 function updateScrollerItemsViewable() {
-  if(window.innerWidth>=1024){
+  if (window.innerWidth >= 1024) {
     return 4
-  }else if(window.innerWidth >= 768){
+  } else if (window.innerWidth >= 768) {
     return 3
-  }else{
+  } else {
     return 2
   }
 }
@@ -192,51 +198,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //countdown
-  // Set target date
-  const targetDate = new Date("February 25, 2025 08:00:00").getTime();
+// Set target date
+const targetDate = new Date("February 25, 2025 08:00:00").getTime();
 
-  // Update countdown every second
-  const countdownInterval = setInterval(() => {
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
+// Update countdown every second
+const countdownInterval = setInterval(() => {
+  const now = new Date().getTime();
+  const timeLeft = targetDate - now;
 
-    if (timeLeft <= 0) {
-      clearInterval(countdownInterval);
-      document.getElementById("countdown").innerHTML =
-        "<h2 class='text-2xl font-bold'>Sự kiện đã bắt đầu!</h2>";
-      return;
-    }
+  if (timeLeft <= 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("countdown").innerHTML =
+      "<h2 class='text-2xl font-bold'>Sự kiện đã bắt đầu!</h2>";
+    return;
+  }
 
-    // Calculate days, hours, minutes, and seconds
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Update DOM
-    document.getElementById("days").textContent = String(days).padStart(2, '0');
-    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-  }, 1000);
+  // Update DOM
+  document.getElementById("days").textContent = String(days).padStart(2, '0');
+  document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+  document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+  document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+}, 1000);
 
 
-  const scrollTopButton = document.getElementById('scrollTopButton');
+const scrollTopButton = document.getElementById('scrollTopButton');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-      scrollTopButton.classList.remove('hidden'); // Hiện nút khi cuộn xuống
-    } else {
-      scrollTopButton.classList.add('hidden'); // Ẩn nút khi ở đầu trang
-    }
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    scrollTopButton.classList.remove('hidden'); // Hiện nút khi cuộn xuống
+  } else {
+    scrollTopButton.classList.add('hidden'); // Ẩn nút khi ở đầu trang
+  }
+});
+
+scrollTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Cuộn mượt
   });
-
-  scrollTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Cuộn mượt
-    });
-  });
+});
 
 //form brochure
 function handleFormBrochure() {
@@ -308,7 +314,7 @@ function showToast(title, message) {
   toastContainer.className = "fixed top-20  right-1 md:right-4 w-96 p-4 bg-white rounded-lg shadow-lg z-50";
 
   const toastContent = `
-    <div class="flex items-start">
+    <div class="flex items-center">
       <div class="flex-shrink-0">
         <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -316,11 +322,10 @@ function showToast(title, message) {
       </div>
       <div class="ml-3 w-0 flex-1">
         <p class="text-sm font-semibold text-gray-900">${title}</p>
-        
       </div>
     </div>
   `;
-{/* <p class="mt-1 text-sm text-gray-500">${message}</p> */}
+  {/* <p class="mt-1 text-sm text-gray-500">${message}</p> */ }
   toastContainer.innerHTML = toastContent;
   document.body.appendChild(toastContainer);
 
