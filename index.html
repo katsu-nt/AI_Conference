@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shorcut icon" type="x-icon" href="./assets/imgs/2.jpg" />
+    <title>AI IN HEALTH CONFERENCE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="my-bg-blue fixed w-full z-50 top-0 start-0 border-b border-gray-200 border-my-blue"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./assets/imgs/logo.png" class="h-8" alt="AI logo" />
+          </a>
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <button
+              type="button"
+              class="text-white bg-my-red hover:bg-my-light-blue transition-all focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center animate-shake hover:animate-none"
+            >
+              <a href="./assets/pages/sub.html">Đăng ký ngay</a>
+            </button>
+
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 hover:ring-white"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent"
+            >
+              <li>
+                <a
+                  href="#about-us"
+                  class="nav-item block py-2 px-3 rounded md:hover:bg-transparent md:p-0 md:hover:text-my-red text-my-red hover:text-my-red"
+                  >Về chúng tôi</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="nav-item flex items-center justify-between w-full py-2 px-3 text-white rounded hover:text-my-red md:border-0 md:p-0 md:w-auto"
+                >
+                  <a href="#event-info">Sự kiện</a>
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-40 hidden font-normal divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700 divide-gray-600"
+                >
+                  <ul
+                    class="py-2 text-sm text-white"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="#event-info"
+                        class="block px-4 py-2 hover:bg-gray-500"
+                        >Thông tin</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#speakers"
+                        class="block px-4 py-2 hover:bg-gray-500"
+                        >Diễn giả</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#agenda"
+                        class="block px-4 py-2 hover:bg-gray-500"
+                        >Lịch trình</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#exhi"
+                  class="nav-item block py-2 px-3 rounded md:hover:bg-transparent md:p-0 md:hover:text-my-red text-white hover:text-my-red"
+                  >Triển lãm</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#news"
+                  class="nav-item block py-2 px-3 rounded md:hover:bg-transparent md:p-0 md:hover:text-my-red text-white hover:text-my-red"
+                  >Tin tức</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="nav-item block py-2 px-3 rounded md:hover:bg-transparent md:p-0 md:hover:text-my-red text-white hover:text-my-red"
+                  >English</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main style="margin-top: 69px">
+      <section id="about-us">
+        <section class="bg-center bg-no-repeat bg-blend-multiply about-us-top">
+          <div class="bg-gray-900 bg-opacity-40">
+            <div
+              class="px-4 flex justify-center md:justify-start text-center pt-12 lg:pt-20 pb-12 lg:pb-20 animate__animated animate__backInDown animate__delay-1.75s"
+            >
+              <div
+                class="w-full md:pl-12 flex gap-3 justify-center md:justify-start items-center"
+              >
+                <article class="flex items-center justify-center">
+                  <img
+                    src="./assets/imgs/Screen Shot 2024-11-08 at 11.16.53.png"
+                    alt="Brand 1"
+                    class="h-14 md:h-20 w-auto rounded-full"
+                  />
+                </article>
+                <article class="flex items-center justify-center">
+                  <img
+                    src="./assets/imgs/Logo_So_TTTT__Âm_bản_-removebg-preview.png"
+                    alt="Brand 1"
+                    class="h-14 md:h-20 w-auto"
+                  />
+                </article>
+                <article class="flex items-center justify-center">
+                  <img
+                    src="./assets/imgs/DXC.png"
+                    alt="Brand 1"
+                    class="h-14 md:h-20 w-auto"
+                  />
+                </article>
+                <article class="flex items-center justify-center">
+                  <img
+                    src="./assets/imgs/HCA logo 2024 (white).png"
+                    alt="Brand 1"
+                    class="h-8 md:h-12 w-auto"
+                  />
+                </article>
+              </div>
+            </div>
+            <div
+              class="px-4 mx-auto max-w-screen-xl text-center pb-24 lg:pb-56 animate__animated animate__backInDown animate__delay-1.75s"
+            >
+              <h1
+                class="mb-4 tracking-tight leading-none text-white text-2xl md:text-4xl lg:text-5xl"
+              >
+                <span class="font-bold mb-3 md:mb-0 block md:inline"
+                  >HỘI NGHỊ QUỐC TẾ</span
+                >
+                <span class="px-2 hidden md:inline">|</span>
+                <span class="font-bold block md:inline"
+                  >AI IN HEALTH CONFERENCE</span
+                >
+              </h1>
+              <p
+                class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48 text-justify"
+              >
+                Hội nghị quốc tế với chủ đề “Ai in health conference" 2025 được
+                tổ chức bởi Sở Y tế TP.Hồ Chí Minh, Sở Truyền Thông & Thông tin
+                Tp.HCM, Trung tâm Chuyển đổi số và Hội Tin học TP. HCM, là sự
+                kiện nằm trong hoạt động nằm trong chủ trương y tế thông minh
+                của thành phố.
+              </p>
+              <p
+                class="mb-2 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48 text-justify"
+              >
+                <span>Địa điểm:</span>
+                <span class="text-white md:text-my-light-blue font-bold"
+                  >Hội trường thành uỷ TP. HCM</span
+                >
+              </p>
+              <p
+                class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48 text-justify"
+              >
+                <span>Thời gian:</span>
+                <span class="text-white md:text-my-light-blue font-bold"
+                  >25.02.2024 từ 8h - 17h</span
+                >
+              </p>
+              <div
+                class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
+              >
+                <a
+                  href="#"
+                  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 bg-my-red hover:bg-my-light-blue"
+                >
+                  Đăng ký tham gia ngay
+                  <svg
+                    class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <button
+                  data-modal-target="brochure-modal"
+                  data-modal-toggle="brochure-modal"
+                  class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
+                  type="button"
+                >
+                  Ai in health conference brochure
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="vendor" class="my-bg-white">
+          <div
+            class="px-4 mx-auto max-w-screen-xl text-center md:text-left pt-12 lg:pt-24"
+          >
+            <h1
+              class="text-my-blue uppercase mb-8 md:mb-12 font-bold mb-10 text-2xl md:text-4xl lg:text-5xl"
+            >
+              Đối tác đồng hành
+            </h1>
+            <div class="md:flex md:gap-4 items-center mb-8 md:mb-12">
+              <div
+                class="text-my-blue normal-case text-xl mb-6 md:mb-0 md:text-2xl lg:text-3xl text-nowrap flex justify-center md:justify-start items-center gap-2"
+              >
+                <span class="text-my-red"
+                  ><i class="fa-solid fa-minus"></i
+                ></span>
+                <span class="font-bold">Đơn vị chủ trì</span>
+              </div>
+              <div class="overflow-hidden">
+                <div class="flex gap-8 scrollerContainer">
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/DXC.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/ICT.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/SOYTE.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/HCA logo 2024.png"
+                      alt="Brand 1"
+                      class="h-12 md:h-24 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/DXC.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/ICT.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/SOYTE.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/HCA logo 2024.png"
+                      alt="Brand 1"
+                      class="h-12 md:h-24 w-auto"
+                    />
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="md:flex md:gap-2 items-center mb-8 md:mb-12">
+              <div
+                class="text-my-blue normal-case text-xl md:text-2xl mb-6 md:mb-0 lg:text-3xl text-nowrap flex justify-center md:justify-start items-center gap-2"
+              >
+                <span class="text-my-red"
+                  ><i class="fa-solid fa-minus"></i
+                ></span>
+                <span class="font-bold">Đối tác tài trợ</span>
+              </div>
+              <div class="overflow-hidden">
+                <div class="flex gap-8 scrollerContainer-02">
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/DXC.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/ICT.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/SOYTE.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/HCA logo 2024.png"
+                      alt="Brand 1"
+                      class="h-12 md:h-24 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/DXC.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/ICT.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/SOYTE.png"
+                      alt="Brand 1"
+                      class="h-16 md:h-32 w-auto"
+                    />
+                  </article>
+                  <article class="flex items-center justify-center">
+                    <img
+                      src="./assets/imgs/HCA logo 2024.png"
+                      alt="Brand 1"
+                      class="h-12 md:h-24 w-auto"
+                    />
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-my-blue">
+            <div
+              class="px-4 mx-auto max-w-screen-xl text-center md:text-left py-4 lg:py-8"
+            >
+              <div class="md:flex md:gap-2 items-center">
+                <div
+                  class="text-white normal-case text-xl md:text-2xl mb-4 md:mb-0 lg:text-3xl text-nowrap flex justify-center md:justify-start items-center gap-2 mb-2"
+                >
+                  <span class="text-my-red"
+                    ><i class="fa-solid fa-minus"></i
+                  ></span>
+                  <span class="font-semibold">Đơn vị thực hiện</span>
+                </div>
+                <div class="flex w-full justify-center">
+                  <img
+                    src="assets/imgs/footer logo.jpg"
+                    alt="Brand 1"
+                    class="h-20 md:h-36 w-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="event">
+        <div id="event-info" class="bg-center bg-no-repeat bg-blend-multiply">
+          <div class="px-4 mx-auto max-w-screen-xl text-center py-12 lg:py-24">
+            <h1
+              class="tracking-tight leading-none text-white text-2xl md:text-4xl lg:text-5xl uppercase"
+            >
+              <span class="font-bold mb-3 md:mb-0 block md:inline"
+                >Ứng dụng trí tuệ nhân tạo</span
+              >
+              <!-- <span class="px-2 hidden md:inline">|</span> -->
+              <span class="font-bold block md:inline">Trong y tế</span>
+            </h1>
+            <p
+              class="my-3 md:my-10 font-bold text-white sm:px-16 lg:px-48 text-center text-xl md:text-2xl lg:text-3xl md:flex justify-center"
+            >
+              <span class="font-bold block">Thời gian: 25.02.2025</span>
+              <span class="px-2 hidden md:inline">|</span>
+              <span class="font-bold block">TP. HCM</span>
+            </p>
+            <div
+              class="flex flex-wrap justify-center items-top space-y-2 text-white text-left md:text-justify mx-auto px-4 md:w-2/3"
+            >
+              <div
+                class="w-full md:w-1/2 p-3 flex justify-between items-center"
+              >
+                <div
+                  class="flex justify-between items-center text-lg md:text-xl lg:text-2xl"
+                >
+                  <div
+                    class="flex justify-start w-1/4 md:justify-center text-my-red md:gap-1 items-center text-xl md:text-3xl lg:text-4xl"
+                  >
+                    <span
+                      class="font-bold scope-number inline-block w-8 md:w-12"
+                      >10</span
+                    ><i
+                      class="fa-solid fa-plus text-md md:text-lg lg:text-xl"
+                    ></i>
+                  </div>
+                  <div class="w-3/4 pl-2 md:pl-1">
+                    Chuyên gia AI Health trong nước và quốc tế
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-3 flex justify-between items-center"
+              >
+                <div
+                  class="flex justify-between items-center text-lg md:text-xl lg:text-2xl"
+                >
+                  <div
+                    class="flex justify-start w-1/4 md:justify-center text-my-red items-center text-xl md:text-3xl lg:text-4xl"
+                  >
+                    <span
+                      class="font-bold scope-number inline-block w-10 md:w-18"
+                      >700</span
+                    ><i
+                      class="fa-solid fa-plus text-md md:text-lg lg:text-xl"
+                    ></i>
+                  </div>
+                  <div class="w-3/4 pl-2 md:pl-1">
+                    Lượt người tham dự (C,M,E-level)
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-3 flex justify-between items-center"
+              >
+                <div
+                  class="flex justify-between items-center text-lg md:text-xl lg:text-2xl"
+                >
+                  <div
+                    class="flex justify-start w-1/4 md:justify-center text-my-red md:gap-1 items-center text-xl md:text-3xl lg:text-4xl"
+                  >
+                    <span
+                      class="font-bold scope-number inline-block w-8 md:w-12"
+                      >30</span
+                    ><i
+                      class="fa-solid fa-plus text-md md:text-lg lg:text-xl"
+                    ></i>
+                  </div>
+                  <div class="w-3/4 pl-2 md:pl-1">
+                    Đại diện lãnh đạo ngành các tỉnh phía Nam
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-3 flex justify-between items-center"
+              >
+                <div
+                  class="flex justify-between items-center text-lg md:text-xl lg:text-2xl"
+                >
+                  <div
+                    class="flex justify-start w-1/4 md:justify-center text-my-red md:gap-1 items-center text-xl md:text-3xl lg:text-4xl"
+                  >
+                    <span
+                      class="font-bold scope-number inline-block w-8 md:w-12"
+                      >20</span
+                    ><i
+                      class="fa-solid fa-plus text-md md:text-lg lg:text-xl"
+                    ></i>
+                  </div>
+                  <div class="w-3/4 pl-2 md:pl-1">
+                    Showcase Booth tham dự triển lãm
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-3 flex justify-between items-center"
+              >
+                <div
+                  class="flex justify-between items-center text-lg md:text-xl lg:text-2xl"
+                >
+                  <div
+                    class="flex justify-start w-1/4 md:justify-center text-my-red items-center text-xl md:text-3xl lg:text-4xl"
+                  >
+                    <span
+                      class="font-bold scope-number inline-block w-10 md:w-18"
+                      >100</span
+                    ><i
+                      class="fa-solid fa-plus text-md md:text-lg lg:text-xl"
+                    ></i>
+                  </div>
+                  <div class="w-3/4 pl-2 md:pl-1">
+                    Đại diện bệnh viện, phòng khám
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="speakers" class="my-bg-white">
+          <div class="px-4 mx-auto max-w-screen-xl text-center py-12 lg:py-24">
+            <h1
+              class="text-my-blue uppercase mb-10 font-bold mb-10 text-2xl md:text-4xl lg:text-5xl"
+            >
+              Diễn giả khách mời
+            </h1>
+            <!-- Speakers mdscreen -->
+            <div class="hidden md:flex flex flex-wrap justify-center gap-10">
+              <!-- Speaker Card -->
+              <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                  <img
+                    src="./assets/imgs/avt.jpg"
+                    alt="Speaker Image"
+                    class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <h3
+                    class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                  >
+                    John Doe
+                  </h3>
+                  <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                </div>
+              </div>
+              <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                  <img
+                    src="./assets/imgs/avt.jpg"
+                    alt="Speaker Image"
+                    class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <h3
+                    class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                  >
+                    John Doe
+                  </h3>
+                  <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                </div>
+              </div>
+              <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                  <img
+                    src="./assets/imgs/avt.jpg"
+                    alt="Speaker Image"
+                    class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <h3
+                    class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                  >
+                    John Doe
+                  </h3>
+                  <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                </div>
+              </div>
+              <!-- Repeat Speaker Card -->
+              <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                  <img
+                    src="./assets/imgs/avt.jpg"
+                    alt="Speaker Image"
+                    class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <h3
+                    class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                  >
+                    Jane Smith
+                  </h3>
+                  <p class="text-gray-300 text-sm">
+                    AI Specialist, Future Labs
+                  </p>
+                </div>
+              </div>
+              <!-- Additional Speaker Cards -->
+              <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                  <img
+                    src="./assets/imgs/avt.jpg"
+                    alt="Speaker Image"
+                    class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <h3
+                    class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                  >
+                    Michael Lee
+                  </h3>
+                  <p class="text-gray-300 text-sm">CTO, GreenTech</p>
+                </div>
+              </div>
+              <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                  <img
+                    src="./assets/imgs/avt.jpg"
+                    alt="Speaker Image"
+                    class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <h3
+                    class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                  >
+                    Sophia Wilson
+                  </h3>
+                  <p class="text-gray-300 text-sm">Founder, Creative Minds</p>
+                </div>
+              </div>
+            </div>
+            <!-- Speakers mobile -->
+            <div
+              id="controls-carousel"
+              class="relative w-full md:hidden"
+              data-carousel="static"
+            >
+              <!-- Carousel wrapper -->
+              <div class="relative h-96 overflow-hidden rounded-lg">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                      <img
+                        src="./assets/imgs/avt.jpg"
+                        alt="Speaker Image"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                    ></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-center">
+                      <h3
+                        class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                      >
+                        John Doe
+                      </h3>
+                      <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                      <img
+                        src="./assets/imgs/avt.jpg"
+                        alt="Speaker Image"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                    ></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-center">
+                      <h3
+                        class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                      >
+                        John Doe
+                      </h3>
+                      <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                      <img
+                        src="./assets/imgs/avt.jpg"
+                        alt="Speaker Image"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                    ></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-center">
+                      <h3
+                        class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                      >
+                        John Doe
+                      </h3>
+                      <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                      <img
+                        src="./assets/imgs/avt.jpg"
+                        alt="Speaker Image"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                    ></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-center">
+                      <h3
+                        class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                      >
+                        John Doe
+                      </h3>
+                      <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                      <img
+                        src="./assets/imgs/avt.jpg"
+                        alt="Speaker Image"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                    ></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-center">
+                      <h3
+                        class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                      >
+                        John Doe
+                      </h3>
+                      <p class="text-gray-300 text-sm">CEO, Tech Innovations</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                      <img
+                        src="./assets/imgs/avt.jpg"
+                        alt="Speaker Image"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                    ></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-center">
+                      <h3
+                        class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                      >
+                        John Doe
+                      </h3>
+                      <p class="text-gray-300 text-sm">
+                        CEO, Tech Innovations 6
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slider controls -->
+              <button
+                type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev
+              >
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-2 group-focus:ring-white group-focus:outline-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-white rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 1 1 5l4 4"
+                    />
+                  </svg>
+                  <span class="sr-only">Previous</span>
+                </span>
+              </button>
+              <button
+                type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next
+              >
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-2 group-focus:ring-white group-focus:outline-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-white rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <span class="sr-only">Next</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="agenda" class="bg-center bg-no-repeat bg-blend-multiply">
+          <div class="px-4 mx-auto max-w-screen-xl text-center py-12 lg:py-24">
+            <div class="flex flex-wrap justify-between items-top space-y-2">
+              <div class="w-full md:w-2/5">
+                <h1
+                  class="tracking-tight leading-none text-white text-xl md:text-2xl lg:text-3xl uppercase font-bold mb-5 md:mb-10"
+                >
+                  Phiên sáng
+                </h1>
+
+                <ol class="relative border-s border-white">
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >09 : 20</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      PHIÊN 1: AI LANDSCAPE_ TRAO QUYỀN CHO TƯƠNG LAI
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote 1:</span> Kết
+                      quả triển khai Y tế thông minh của Thành phố giai đoạn
+                      2020 - 2024; Định hướng của Thành phố về bức tranh Y tế
+                      thông minh giai đoạn mới 2025 – 2030 (Đại diện Lãnh đạo Sở
+                      Y tế Thành phố Hồ Chí Minh)
+                    </p>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote 2:</span> AI
+                      trong Y tế thông minh của thế giới (Chuyên gia từ WHO)
+                    </p>
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >10 : 10</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      PHIÊN 2: SÁNG TẠO AI TRONG VẬN HÀNH, QUẢN LÝ Y TẾ
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote 1:</span> Xây
+                      dựng nền tảng dùng chung trong quản lý bệnh án điện tử
+                      (Chuyên gia từ Vương Quốc Anh)
+                    </p>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote 2:</span> Quy
+                      trình triển khai hồ sơ sức khỏe điện tử tại Singapore
+                      (Chuyên gia từ Singapore)
+                    </p>
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >10 : 50</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      BÀN TRÒN THẢO LUẬN
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      AI có trách nhiệm, đạo đức và minh bạch trong y tế & chăm
+                      sóc sức khỏe
+                    </p>
+                  </li>
+                </ol>
+              </div>
+              <div class="w-full md:w-2/5">
+                <h1
+                  class="tracking-tight leading-none text-white text-xl md:text-2xl lg:text-3xl uppercase font-bold mb-5 md:mb-10"
+                >
+                  Phiên chiều
+                </h1>
+
+                <ol class="relative border-s border-white">
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >14 : 10</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      PHIÊN 3: KHI AI THAM GIA HỘI CHẨN
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote:</span> Đi vào
+                      các khía cạnh kỹ thuật của AI và công nghệ học sâu trong
+                      việc tham gia hội chẩn (Chuyên gia từ Hàn Quốc/ Đài Loan)
+                    </p>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white"
+                        >Tham luận từ chuyên gia cao cấp của Việt Nam</span
+                      >
+                    </p>
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >14 : 50</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      PHIÊN 4: CHĂM SÓC SỨC KHỎE VỚI AI
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote:</span> từ
+                      chuyên gia cao cấp của Việt Nam
+                    </p>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white"
+                        >Tham luận từ chuyên gia cao cấp của Việt Nam</span
+                      >
+                    </p>
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >15 : 40</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      PHIÊN 5: BỆNH VIỆN THÔNG MINH – AI TỐI ƯU HỆ THỐNG VẬN
+                      HÀNH VÀ QUẢN TRỊ DỮ LIỆU Y TẾ
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white">Keynote:</span> từ
+                      chuyên gia cao cấp của Việt Nam
+                    </p>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      <span class="font-bold text-white"
+                        >Tham luận từ chuyên gia cao cấp của Việt Nam</span
+                      >
+                    </p>
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-gray-900"
+                    ></div>
+                    <time
+                      class="mb-2 text-sm font-semibold leading-none text-white"
+                      >16 : 20</time
+                    >
+                    <h3 class="text-lg font-semibold text-white uppercase mb-2">
+                      BÀN TRÒN THẢO LUẬN
+                    </h3>
+                    <p class="mb-4 text-justify font-normal text-white">
+                      Tối ưu hệ thống vận hành và quản trị dữ liệu bệnh viện
+                      thông minh
+                    </p>
+                  </li>
+                </ol>
+              </div>
+              <div class="w-full">
+                <div
+                  id="countdown"
+                  class="bg-transparent text-white text-center py-6"
+                >
+                  <h2
+                    class="text-2xl md:text-3xl font-bold mb-4 md:flex justify-center"
+                  >
+                    <span class="font-bold block">Thời gian: 25.02.2025</span>
+                    <span class="px-2 hidden md:inline">|</span>
+                    <span class="font-bold block">TP. HCM</span>
+                  </h2>
+                  <div class="flex justify-center items-center space-x-4">
+                    <div>
+                      <span id="days" class="text-4xl font-bold block">00</span>
+                      <span class="text-sm uppercase">Ngày</span>
+                    </div>
+                    <div>
+                      <span id="hours" class="text-4xl font-bold block"
+                        >00</span
+                      >
+                      <span class="text-sm uppercase">Giờ</span>
+                    </div>
+                    <div>
+                      <span id="minutes" class="text-4xl font-bold block"
+                        >00</span
+                      >
+                      <span class="text-sm uppercase">Phút</span>
+                    </div>
+                    <div>
+                      <span id="seconds" class="text-4xl font-bold block"
+                        >00</span
+                      >
+                      <span class="text-sm uppercase">Giây</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="exhi" class="bg-center bg-no-repeat bg-blend-multiply">
+        <div class="bg-gray-900 bg-opacity-50">
+          <div class="px-4 mx-auto max-w-screen-xl text-center py-12 lg:py-24">
+            <h1
+              class="tracking-tight leading-none text-white text-xl md:text-2xl lg:text-3xl normal-case font-normal mb-5 md:mb-10 leading-snug"
+            >
+              Tham dự triển lãm:
+              <span class="block mt-1"
+                >Nơi quy tụ các công ty Health tech hàng đầu</span
+              >
+            </h1>
+            <button
+              type="button"
+              class="text-white bg-my-red hover:bg-my-light-blue transition-all focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-full text-lg md:text-xl lg:text-2xl px-5 py-3 text-center"
+            >
+              Đăng ký triển lãm ngay
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="news" class="my-bg-white">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-12 lg:py-24">
+          <h1
+            class="text-my-blue uppercase mb-10 font-bold mb-10 text-2xl md:text-4xl lg:text-5xl"
+          >
+            Tin Tức Mới Nhất
+          </h1>
+          <!-- News for md and larger screens -->
+          <div class="hidden md:flex flex-wrap justify-center gap-10">
+            <!-- News Card -->
+            <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+              <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                <img
+                  src="./assets/imgs/news.jpg"
+                  alt="News Image"
+                  class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <h3
+                  class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                >
+                  Tiêu đề bài viết
+                </h3>
+                <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                <!-- Đọc Ngay Button -->
+                <a
+                  href="#"
+                  class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                >
+                  Đọc Ngay
+                </a>
+              </div>
+            </div>
+            <!-- Repeat for more News Cards -->
+            <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+              <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                <img
+                  src="./assets/imgs/news.jpg"
+                  alt="News Image"
+                  class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <h3
+                  class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                >
+                  Tiêu đề bài viết
+                </h3>
+                <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                <!-- Đọc Ngay Button -->
+                <a
+                  href="#"
+                  class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                >
+                  Đọc Ngay
+                </a>
+              </div>
+            </div>
+            <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+              <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                <img
+                  src="./assets/imgs/news.jpg"
+                  alt="News Image"
+                  class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <h3
+                  class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                >
+                  Tiêu đề bài viết
+                </h3>
+                <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                <!-- Đọc Ngay Button -->
+                <a
+                  href="#"
+                  class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                >
+                  Đọc Ngay
+                </a>
+              </div>
+            </div>
+            <div class="relative group w-1/3 xl:w-1/4 mx-auto">
+              <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                <img
+                  src="./assets/imgs/news.jpg"
+                  alt="News Image"
+                  class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <h3
+                  class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                >
+                  Tiêu đề bài viết
+                </h3>
+                <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                <!-- Đọc Ngay Button -->
+                <a
+                  href="#"
+                  class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                >
+                  Đọc Ngay
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- News for mobile screens -->
+          <div
+            id="news-carousel"
+            class="relative w-full md:hidden"
+            data-carousel="static"
+          >
+            <!-- Carousel wrapper -->
+            <div class="relative h-96 overflow-hidden rounded-lg">
+              <!-- News Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="relative group">
+                  <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                    <img
+                      src="./assets/imgs/news.jpg"
+                      alt="News Image"
+                      class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                  ></div>
+                  <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                    >
+                      Tiêu đề bài viết
+                    </h3>
+                    <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                    <!-- Đọc Ngay Button -->
+                    <a
+                      href="#"
+                      class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                    >
+                      Đọc Ngay
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- News Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="relative group">
+                  <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                    <img
+                      src="./assets/imgs/news.jpg"
+                      alt="News Image"
+                      class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                  ></div>
+                  <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                    >
+                      Tiêu đề bài viết
+                    </h3>
+                    <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                    <!-- Đọc Ngay Button -->
+                    <a
+                      href="#"
+                      class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                    >
+                      Đọc Ngay
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="relative group">
+                  <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                    <img
+                      src="./assets/imgs/news.jpg"
+                      alt="News Image"
+                      class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                  ></div>
+                  <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                    >
+                      Tiêu đề bài viết
+                    </h3>
+                    <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                    <!-- Đọc Ngay Button -->
+                    <a
+                      href="#"
+                      class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                    >
+                      Đọc Ngay
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="relative group">
+                  <div class="overflow-hidden rounded-lg shadow-xl bg-white">
+                    <img
+                      src="./assets/imgs/news.jpg"
+                      alt="News Image"
+                      class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#08004D] to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 rounded-lg"
+                  ></div>
+                  <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-my-light-blue transition-colors duration-300"
+                    >
+                      Tiêu đề bài viết
+                    </h3>
+                    <p class="text-gray-300 text-sm">Ngày đăng: 01/01/2024</p>
+                    <!-- Đọc Ngay Button -->
+                    <a
+                      href="#"
+                      class="inline-block mt-4 px-6 py-2 bg-my-blue text-white rounded-full text-sm font-medium hover:bg-my-light-blue transition-colors duration-300"
+                    >
+                      Đọc Ngay
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slider controls -->
+            <button
+              type="button"
+              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-2 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-2 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="bg-my-blue">
+      <div
+        class="px-4 mx-auto max-w-screen-xl text-center py-6 lg:py-12 flex justify-center items-center"
+      >
+        <div class="w-full md:w-2/5">
+          <div>
+            <div class="flex w-full justify-center mb-3 md:mb-6">
+              <img
+                src="assets/imgs/footer logo.jpg"
+                alt="Brand 1"
+                class="h-16 md:h-28 w-auto"
+              />
+            </div>
+            <div>
+              <h1
+                class="text-white uppercase font-bold mb-6 text-2xl md:text-3xl text-center"
+              >
+                <a href="#"><i class="fa-brands fa-facebook pr-2"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin pl-2"></i></a>
+              </h1>
+            </div>
+            <div>
+              <h1
+                class="text-white font-bold mb-1 text-md md:text-lg text-center"
+              >
+                Địa chỉ liên hệ:
+                <span class="font-normal"
+                  >1B Đường 30, Khu phố 2, Phường An Khánh, TP. Thủ Đức,
+                  TP.HCM</span
+                >
+              </h1>
+            </div>
+            <div>
+              <h1
+                class="text-white font-bold mb-1 text-md md:text-lg text-center"
+              >
+                Email: <span class="font-normal">thao.huynh@nimcom.vn</span>
+              </h1>
+            </div>
+            <div>
+              <h1
+                class="text-white font-bold mb-1 text-md md:text-lg text-center"
+              >
+                Phone: <span class="font-normal">(+84) 908 404 392</span>
+              </h1>
+            </div>
+            <div>
+              <h1
+                class="text-white font-bold mb-1 text-md md:text-lg text-center"
+              >
+                &copy; 2024 by NIM COM
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- brochure-modal -->
+    <div
+      id="brochure-modal"
+      tabindex="-1"
+      data-modal-backdrop="static"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative rounded-lg shadow my-bg-blue">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-white"
+          >
+            <h3 class="text-xl font-semibold text-white">
+              Đăng ký để nhận ngay <span class="font-semibold text-my-red">Brochure</span>
+            </h3>
+            <button
+              type="button"
+              class="end-2.5 text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+              data-modal-hide="brochure-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5">
+            <form class="space-y-6" action="#">
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-white"
+                  >Họ và tên</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name-brochure"
+                  placeholder="Nguyễn Văn A"
+                  class="border border-gray-300 text-my-blue text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-bg-white border-my-blue placeholder-my-blue "
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-white"
+                  >Địa chỉ email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email-brochure"
+                  class="border border-gray-300 text-my-blue text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-bg-white border-my-blue placeholder-my-blue "
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+              <button
+                type="button"
+                onclick="handleFormBrochure()"
+                class="w-full inline-flex justify-center items-center py-2 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 bg-my-red hover:bg-my-light-blue"
+              >
+                Đăng ký ngay
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div
+      id="scrollTopButton"
+      class="fixed bottom-5 right-5 bg-gray-800 bg-opacity-75 text-white p-3 px-5 rounded-full z-50 cursor-pointer shadow-md hidden"
+    >
+      <i class="fas fa-arrow-up text-lg"></i>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
