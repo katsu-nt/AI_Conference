@@ -14,43 +14,89 @@ navLinks.forEach(link => {
         event.currentTarget.classList.remove('text-white');
     });
 });
+const subNavLinks = document.querySelectorAll('#dropdownNavbar ul li a');
+subNavLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        // Loại bỏ màu đỏ và đặt trắng cho tất cả các mục
+        subNavLinks.forEach(otherLink => {
+            otherLink.classList.remove('text-my-red');
+            otherLink.classList.add('text-white');
+        });
 
-
-let intervalIds = []; // Lưu trữ các interval ID
-
-function countUpNumbers() {
-    const numberElements = document.querySelectorAll('.scope-number');
-
-    // Dừng tất cả các interval cũ
-    intervalIds.forEach(id => clearInterval(id));
-    intervalIds = [];
-
-    numberElements.forEach(numberElement => {
-        let targetNumber = parseInt(numberElement.textContent);
-        let currentNumber = 0;
-
-        const intervalId = setInterval(() => {
-            currentNumber++;
-            numberElement.textContent = currentNumber;
-
-            if (currentNumber >= targetNumber) {
-                clearInterval(intervalId);
-            }
-        }, 10);
-
-        // Lưu trữ interval ID để quản lý
-        intervalIds.push(intervalId);
+        // Thêm màu đỏ cho mục được nhấn
+        event.currentTarget.classList.add('text-my-red');
+        event.currentTarget.classList.remove('text-white');
     });
-}
+});
+// How long you want the animation to take, in ms
+const animationDuration = 2000;
+// Calculate how long each ‘frame’ should last if we want to update the animation 60 times per second
+const frameDuration = 1000 / 60;
+// Use that to calculate how many frames we need to complete the animation
+const totalFrames = Math.round(animationDuration / frameDuration);
+// An ease-out function that slows the count as it progresses
+const easeOutQuad = t => t * (2 - t);
 
-// Gọi hàm đếm và lặp lại sau mỗi 12 giây
-countUpNumbers();
-setInterval(countUpNumbers, 12000);
+// The animation function, which takes an Element
+const animateCountUp = el => {
+  let frame = 0;
+  const countTo = parseInt(el.getAttribute('data-count'), 10);
+  // Reset the element to 0 for a fresh start
+  el.innerHTML = '0';
+  
+  // Start the animation running 60 times per second
+  const counter = setInterval(() => {
+    frame++;
+    // Calculate our progress as a value between 0 and 1
+    // Pass that value to our easing function to get our
+    // progress on a curve
+    const progress = easeOutQuad(frame / totalFrames);
+    // Use the progress value to calculate the current count
+    const currentCount = Math.round(countTo * progress);
+
+    // If the current count has changed, update the element
+    if (parseInt(el.innerHTML, 10) !== currentCount) {
+      el.innerHTML = currentCount;
+    }
+
+    // If we’ve reached our last frame, stop the animation
+    if (frame === totalFrames) {
+      clearInterval(counter);
+    }
+  }, frameDuration);
+};
+
+// Run the animation on all elements with a class of ‘scope-number’
+// Every time they enter the viewport
+const observeAnimations = () => {
+  const countupEls = document.querySelectorAll('.scope-number');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start animation
+          animateCountUp(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 } // Adjust as needed (0.5 means 50% of the element is visible)
+  );
+
+  countupEls.forEach(el => {
+    // Store the initial count value in a data attribute
+    el.setAttribute('data-count', el.innerHTML);
+    observer.observe(el);
+  });
+};
+
+observeAnimations();
+
 
 //infinite loop
 const config = {
   scrollerSpeed: 3, // seconds
-  scrollerTransitionSpeed: 1, // seconds, must be <= scrollerSpeed
+  scrollerTransitionSpeed: 2, // seconds, must be <= scrollerSpeed
 };
 
 function updateScrollerItemsViewable() {

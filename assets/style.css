@@ -1826,6 +1826,14 @@ input:checked + .toggle-bg {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-\[url\(\'\.\/imgs\/banner\.png\'\)\] {
+  background-image: url('./imgs/banner.png');
+}
+
+.bg-\[url\(\'\.\/imgs\/imgBg\.jpg\'\)\] {
+  background-image: url('./imgs/imgBg.jpg');
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -1934,6 +1942,10 @@ input:checked + .toggle-bg {
 
 .pb-24 {
   padding-bottom: 6rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
 }
 
 .pl-2 {
@@ -2204,6 +2216,10 @@ input:checked + .toggle-bg {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 body {
   box-sizing: border-box;
@@ -2239,7 +2255,6 @@ body {
 }
 
 #about-us .about-us-top {
-  background-image: url("./imgs/banner.png");
   background-size: cover;
 }
 
@@ -2263,7 +2278,6 @@ body {
 
 #event-info,
 #agenda {
-  background-image: url("./imgs/imgBg.jpg");
   background-size: cover;
 }
 
@@ -2533,6 +2547,10 @@ body {
     margin-inline-start: 1rem;
   }
 
+  .sm\:h-16 {
+    height: 4rem;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2637,6 +2655,10 @@ body {
 
   .md\:w-12 {
     width: 3rem;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:w-2\/3 {
